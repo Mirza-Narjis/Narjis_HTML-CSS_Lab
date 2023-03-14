@@ -1,0 +1,98 @@
+<!-- HTML & CSS Lab - Question 3 -->
+<!-- 3.	Create a gmail account creation form to take input from users as specified. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gmail Account Form</title>
+  </head>
+  <!-- CSS -->
+  <style type="text/css">
+    .container {
+      width: 325px;
+      padding: 10px;
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      background: transparent;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    #bgvideo {
+      position: fixed;
+      width: auto;
+      height: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .details {
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+    }
+    input {
+      height: 30px;
+      width: 300px;
+      min-width: 100px;
+      margin-bottom: 10px;
+      border: none;
+      padding: 10px;
+      background-color: whitesmoke;
+      font-size: 20px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    input:focus {
+      outline: none;
+      color: black;
+      background-color: rgba(136, 140, 143, 0.35);
+    }
+
+    button {
+      margin: 20px;
+      width: 80px;
+      border-radius: 4px;
+      height: 30px;
+      color: white;
+      font-size: 16px;
+      border: none;
+      background-color: rgb(173, 116, 226);
+    }
+  </style>
+
+  <body>
+    <video autoplay muted loop id="bgvideo">
+      <source src="videos/Background.mp4" type="video/mp4" />
+      Your Bowser does not support for video TAG / HTML 5
+    </video>
+    <div class="container">
+      <div>
+        <h2>Create Gmail Account</h2>
+      </div>
+      <!-- form -->
+      <form action="">
+        <div class="details">
+          <input type="text" placeholder="Full Name" required />
+          <input
+            type="number"
+            min="6000000000"
+            max="9999999999"
+            placeholder="Contact Number"
+            required
+          />
+          <input type="email" placeholder="Enter Email Id" required />
+        </div>
+        <div>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

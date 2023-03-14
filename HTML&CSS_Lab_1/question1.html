@@ -1,0 +1,110 @@
+<!-- HTML & CSS Lab - Question 1 -->
+<!-- 1.	Create a Navigation menu bar with dropdown list -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navigation Menu Bar</title>
+    <!-- CSS -->
+    <style>
+      body {
+        height: auto;
+        margin: 0;
+      }
+
+      header {
+        background-color: red;
+        padding: 15px;
+        text-align: right;
+        margin: 0;
+      }
+
+      header h1 {
+        margin-right: 80px;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+      }
+
+      .navlist {
+        background-color: grey;
+        margin: 0;
+      }
+
+      .navlist li a {
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+      }
+
+      .navlist li {
+        padding: 10px;
+        display: inline-block;
+      }
+
+      .navlist li:hover {
+        background-color: black;
+      }
+
+      .navlist li:nth-child(2):hover #dropdown2,
+      .navlist li:nth-child(3):hover #dropdown3 {
+        display: block;
+      }
+
+      #dropdown2,
+      #dropdown3 {
+        position: absolute;
+        display: none;
+        top: 40px;
+        background-color: rgb(209, 228, 234);
+        padding: 0%;
+      }
+
+      #dropdown2 li,
+      #dropdown3 li {
+        display: block;
+      }
+
+      #dropdown2 li:hover,
+      #dropdown3 li:hover {
+        background-color: pink;
+      }
+
+      #dropdown2 li a,
+      #dropdown3 li a {
+        color: rgb(114, 114, 239);
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Demo of Dropdown</h1></header>
+    <!--Navbar title-  -->
+    <nav id="navbar">
+      <!-- navigation dropdown -->
+      <ul class="navlist">
+        <li><a href="#">Link 1</a></li>
+
+        <li>
+          <a href="#">Link 2</a>
+          <ul id="dropdown2">
+            <li><a href="#">DD_Link_1</a></li>
+            <li><a href="#">DD_Link_2</a></li>
+            <li><a href="#">DD_Link_3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Link 3</a>
+          <ul id="dropdown3">
+            <li><a href="#">DD_Link_1</a></li>
+            <li><a href="#">DD_Link_2</a></li>
+            <li><a href="#">DD_Link_3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
